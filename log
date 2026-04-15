@@ -33,3 +33,13 @@ hashmap.c:50:18: error: assignment to ‘long int’ from ‘void *’ makes int
    50 |     newMap->size = NULL;
       |                  ^
 2d60705
+Wed Apr 15 04:14:57 AM UTC 2026: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:49:11: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘Pair’
+   49 |     newMap->Pair = NULL;
+      |           ^~
+6b18da6
