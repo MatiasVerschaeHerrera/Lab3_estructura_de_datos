@@ -84,3 +84,19 @@ hashmap.c:49:21: error: assignment to ‘Pair **’ from incompatible pointer ty
    49 |     newMap->buckets = (Pair*) calloc(capacity, sizeof(Pair));
       |                     ^
 1b007e4
+Thu Apr 16 08:04:06 PM UTC 2026: 
+ hashmap.c | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:74:22: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+   74 |         map->current = map->buckets[pos];
+      |                      ^
+hashmap.c:76:12: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+   76 |     return map;
+      |            ^~~
+hashmap.c:65:6: note: declared here
+   65 | void insertMap(HashMap * map, char * key, void * value) {
+      |      ^~~~~~~~~
+264d261
