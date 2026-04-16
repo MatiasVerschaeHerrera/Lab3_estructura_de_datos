@@ -49,7 +49,7 @@ HashMap * createMap(long capacity) {
     if(newMap == NULL) return NULL;
     newMap->buckets = (Pair**) calloc(capacity, sizeof(Pair*));
     if(newMap->buckets == NULL){
-        free(map);
+        free(newMap);
         return NULL;
     }
     newMap->size = 0;
