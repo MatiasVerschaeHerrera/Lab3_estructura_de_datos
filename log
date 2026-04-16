@@ -74,3 +74,13 @@ Wed Apr 15 04:19:04 AM UTC 2026:
  tests:  1|6
 total_score: 5/60
 9728e48
+Thu Apr 16 07:50:20 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:49:21: error: assignment to ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Wincompatible-pointer-types]
+   49 |     newMap->buckets = (Pair*) calloc(capacity, sizeof(Pair));
+      |                     ^
+1b007e4
