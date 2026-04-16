@@ -100,3 +100,13 @@ hashmap.c:65:6: note: declared here
    65 | void insertMap(HashMap * map, char * key, void * value) {
       |      ^~~~~~~~~
 264d261
+Thu Apr 16 08:04:22 PM UTC 2026: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:74:22: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+   74 |         map->current = map->buckets[pos];
+      |                      ^
+6f789c9
