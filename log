@@ -135,3 +135,17 @@ Thu Apr 16 08:16:18 PM UTC 2026:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 815d45a
+Thu Apr 16 08:18:18 PM UTC 2026: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:71:47: error: expected ‘;’ before ‘map’
+   71 |     map->buckets[pos] = createPair(key, value)
+      |                                               ^
+      |                                               ;
+......
+   74 |     map->size++;
+      |     ~~~                                        
+9ce3890
