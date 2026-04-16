@@ -84,9 +84,11 @@ void insertMap(HashMap * map, char * key, void * value) {
 Pair * searchMap(HashMap * map,  char * key) {
     if(map == NULL) return NULL;
     long pos = hash(key, map->capacity);
-    while(map->buckets[pos]->key != key){
-        if(map->buckets[pos] == NULL) return NULL;
-        pos++;
+    Pair *aux = map->buckets[pos];
+    while(aux->key != key){
+        if(aux == NULL) return NULL;
+        pos = (pos+1)%map->capacity;
+        aux = map->buckets[pos];
     }
     return map->buckets[pos];
 }
