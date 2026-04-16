@@ -48,6 +48,10 @@ HashMap * createMap(long capacity) {
     HashMap* newMap = (HashMap*) malloc(sizeof(HashMap));
     if(newMap == NULL) return NULL;
     newMap->buckets = (Pair**) calloc(capacity, sizeof(Pair*));
+    if(map->buckets == NULL){
+        free(map);
+        return NULL;
+    }
     newMap->size = 0;
     newMap->capacity = capacity;
     newMap->current = -1;
@@ -84,7 +88,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 Pair * searchMap(HashMap * map,  char * key) {
     if(map == NULL) return NULL;
     long pos = hash(key, map->capacity);
-    Pair **aux = map->buckets[pos];
+    Pair *aux = map->buckets[pos];
     while(aux->key != key){
         if(aux == NULL) return NULL;
         pos = (pos+1)%map->capacity;
