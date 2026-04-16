@@ -260,3 +260,14 @@ hashmap.c:51:8: error: ‘map’ undeclared (first use in this function)
       |        ^~~
 hashmap.c:51:8: note: each undeclared identifier is reported only once for each function it appears in
 547f93d
+Thu Apr 16 08:51:58 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘createMap’:
+hashmap.c:52:14: error: ‘map’ undeclared (first use in this function)
+   52 |         free(map);
+      |              ^~~
+hashmap.c:52:14: note: each undeclared identifier is reported only once for each function it appears in
+bf735a1
