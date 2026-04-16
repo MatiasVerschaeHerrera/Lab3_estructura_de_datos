@@ -64,6 +64,8 @@ HashMap * createMap(long capacity) {
 // No inserte claves repetidas. Recuerde que el arreglo es circular. Recuerde actualizar la variable size.
 
 void insertMap(HashMap * map, char * key, void * value) {
+    if(map == NULL) return NULL;
+    
     long pos = hash(key, map->capacity);
     while(map->buckets[pos] != 0){
         pos = (pos+1)%map->capacity;
@@ -79,10 +81,14 @@ void insertMap(HashMap * map, char * key, void * value) {
 //   c - Si llega a una casilla nula, retorne NULL inmediatamente (no siga avanzando, la clave no está)
 // Recuerde actualizar el índice current a la posición encontrada. Recuerde que el arreglo es circular.
 
-Pair * searchMap(HashMap * map,  char * key) {   
-
-
-    return NULL;
+Pair * searchMap(HashMap * map,  char * key) {
+    if(map == NULL) return NULL;
+    long pos = hash(key, map->capacity);
+    while(map->buckets[pos]->key != key){
+        if(map->buckets[pos] == NULL) return;
+        pos++;
+    }
+    return map->buckets[pos];
 }
 
 // 4. Implemente la función void eraseMap(HashMap * map, char * key). 
