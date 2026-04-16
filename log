@@ -209,3 +209,16 @@ hashmap.c:84:8: note: declared here
    84 | Pair * searchMap(HashMap * map,  char * key) {
       |        ^~~~~~~~~
 4d1add9
+Thu Apr 16 08:36:57 PM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:88:39: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   88 |         if(map->buckets[pos] == NULL) return;
+      |                                       ^~~~~~
+hashmap.c:84:8: note: declared here
+   84 | Pair * searchMap(HashMap * map,  char * key) {
+      |        ^~~~~~~~~
+8942568
