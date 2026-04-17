@@ -106,10 +106,10 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 void eraseMap(HashMap * map,  char * key) {
     if(map == NULL) return;
-    long pos = hash(key, map->capacity);
-    if(map->buckets[pos] == 0) return;
+    Pair *aux = searchMap(map, key);
+    if(aux == 0) return;
     else{
-        map->buckets[pos]->key = NULL;
+        aux->key = NULL;
         map->size--;
     }
 }
