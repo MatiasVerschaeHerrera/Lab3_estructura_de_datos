@@ -128,6 +128,7 @@ Pair * firstMap(HashMap * map){
         }
         else pos++;
     }
+    return NULL;
 }
 
 Pair * nextMap(HashMap * map) {
