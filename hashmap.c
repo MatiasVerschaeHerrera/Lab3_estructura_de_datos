@@ -123,10 +123,12 @@ Pair * firstMap(HashMap * map){
     long pos = 0;
     while(pos < map->capacity){
         if(map->buckets[pos] != 0){
-            map->current = pos;
-            return map->buckets[pos];
+            if(map->buckets[pos]->value != NULL){
+                map->current = pos;
+                return map->buckets[pos];
+            }
         }
-        else pos = (pos + 1)%map->capacity;
+        else pos++;
     }
     return NULL;
 }
