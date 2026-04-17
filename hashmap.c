@@ -105,7 +105,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 // Recuerde actualizar la variable size.
 
 void eraseMap(HashMap * map,  char * key) {
-    if(map == NULL) return;
+    if(map == NULL || map->buckets == NULL) return;
     Pair *aux = searchMap(map, key);
     if(aux == 0) return;
     else{
@@ -119,9 +119,9 @@ void eraseMap(HashMap * map,  char * key) {
 // Recuerde actualizar el índice.
 
 Pair * firstMap(HashMap * map){
-    if(map == NULL) return NULL;
+    if(map == NULL || map->buckets == NULL) return NULL;
     for(long pos = 0; pos < map->capacity; pos++){
-        if(map->buckets[pos] != 0 && map->buckets[pos]->value != NULL){
+        if(map->buckets[pos] != 0 && map->buckets[pos]->key != NULL){
             map->current = pos;
             return map->buckets[pos];
         }
