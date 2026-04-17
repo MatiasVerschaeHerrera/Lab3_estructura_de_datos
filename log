@@ -335,3 +335,20 @@ Fri Apr 17 03:16:22 AM UTC 2026:
  tests:  8|3
 total_score: 30/60
 e751824
+Fri Apr 17 03:42:19 AM UTC 2026: 
+ hashmap.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:108:28: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+  108 |     if(map == NULL) return NULL;
+      |                            ^~~~
+hashmap.c:107:6: note: declared here
+  107 | void eraseMap(HashMap * map,  char * key) {
+      |      ^~~~~~~~
+hashmap.c:110:28: error: statement with no effect [-Werror=unused-value]
+  110 |     map->buckets[pos]->key == NULL;
+      |                            ^
+cc1: all warnings being treated as errors
+b0414b1
