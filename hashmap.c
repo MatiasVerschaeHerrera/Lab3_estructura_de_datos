@@ -128,7 +128,7 @@ Pair * firstMap(HashMap * map){
                 return map->buckets[pos];
             }
         }
-        else pos++;
+        pos++;
     }
     return NULL;
 }
