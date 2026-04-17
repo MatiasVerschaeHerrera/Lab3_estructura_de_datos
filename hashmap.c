@@ -90,9 +90,9 @@ Pair * searchMap(HashMap * map,  char * key) {
     long pos = hash(key, map->capacity);
     Pair *aux = map->buckets[pos];
     while(is_equal(aux->key, key) == 0){
-        if(aux == 0) return NULL;
         pos = (pos+1)%map->capacity;
         aux = map->buckets[pos];
+        if(aux == 0) return NULL;
     }
     map->current = pos;
     return map->buckets[pos];
