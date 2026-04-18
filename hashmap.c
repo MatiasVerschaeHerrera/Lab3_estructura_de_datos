@@ -169,6 +169,8 @@ void enlarge(HashMap * map) {
         }
         cont++;
     }
+    free(aux);
+    free(oldCapacity);
 }
 
 
