@@ -511,3 +511,13 @@ hashmap.c:161:23: error: incompatible types when assigning to type ‘HashMap’
   161 |         newMap[pos] = aux[pos];
       |                       ^~~
 eb1b4ab
+Sat Apr 18 12:22:03 AM UTC 2026: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:161:23: error: incompatible types when assigning to type ‘HashMap’ {aka ‘struct HashMap’} from type ‘Pair *’
+  161 |         newMap[pos] = aux[pos];
+      |                       ^~~
+2030408

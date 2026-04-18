@@ -157,7 +157,7 @@ void enlarge(HashMap * map) {
     Pair **aux = map->buckets;
     long newCapacity = (map->capacity)*2;
     HashMap *newMap = createMap(newCapacity);
-    for(long pos = 0; pos < map->capacity; i++){
+    for(long pos = 0; pos < map->capacity; pos++){
         newMap[pos] = aux[pos];
     }
     
