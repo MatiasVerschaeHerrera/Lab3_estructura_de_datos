@@ -527,3 +527,16 @@ Sat Apr 18 12:22:21 AM UTC 2026:
  tests:  16|1
 total_score: 50/60
 ab8e43f
+Sat Apr 18 12:28:20 AM UTC 2026: 
+ hashmap.c | 16 +++++++++++-----
+ 1 file changed, 11 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:167:57: error: expected ‘;’ before ‘cont’
+  167 |         insertMap(map, aux[cont]->key, aux[cont]->value)
+      |                                                         ^
+      |                                                         ;
+  168 |         cont++;
+      |         ~~~~                                             
+54b6574
