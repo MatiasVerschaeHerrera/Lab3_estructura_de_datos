@@ -164,7 +164,9 @@ void enlarge(HashMap * map) {
 
     long cont = 0;
     while(cont < oldCapacity){
-        insertMap(map, aux[cont]->key, aux[cont]->value);
+        if(aux[cont] != 0){
+            insertMap(map, aux[cont]->key, aux[cont]->value);
+        }
         cont++;
     }
 }
