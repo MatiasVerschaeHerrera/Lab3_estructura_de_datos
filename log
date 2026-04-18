@@ -462,3 +462,24 @@ Fri Apr 17 04:08:27 AM UTC 2026:
  tests:  16|1
 total_score: 50/60
 ffc0443
+Sat Apr 18 12:21:10 AM UTC 2026: 
+ hashmap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:159:5: error: unknown type name ‘hashMap’; did you mean ‘HashMap’?
+  159 |     hashMap *newMap = createMap(newCapacity);
+      |     ^~~~~~~
+      |     HashMap
+hashmap.c:159:23: error: initialization of ‘int *’ from incompatible pointer type ‘HashMap *’ {aka ‘struct HashMap *’} [-Wincompatible-pointer-types]
+  159 |     hashMap *newMap = createMap(newCapacity);
+      |                       ^~~~~~~~~
+hashmap.c:160:23: error: ‘i’ undeclared (first use in this function)
+  160 |     for(long pos = 0; i < map->capacity; i++){
+      |                       ^
+hashmap.c:160:23: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:161:21: error: assignment to ‘int’ from ‘Pair *’ makes integer from pointer without a cast [-Wint-conversion]
+  161 |         newMap[pos] = aux[pos];
+      |                     ^
+8cdb7e9

@@ -154,8 +154,13 @@ Pair * nextMap(HashMap * map) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
-
-
+    Pair **aux = map->buckets;
+    long newCapacity = (map->capacity)*2;
+    hashMap *newMap = createMap(newCapacity);
+    for(long pos = 0; i < map->capacity; i++){
+        newMap[pos] = aux[pos];
+    }
+    
 }
 
 
